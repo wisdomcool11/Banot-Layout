@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banto Grid</title>
+    <link rel="shortcut icon" href="../bento-grid-main/assets/images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/9753f25b53.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind scripting  using play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              bentoColorPurple:{
+                100: '#dacffc',
+                500: '#7650dc'
+              },
+              bentoColorYellow:{
+                100: '#f9eee1',
+                500: '#ffcb6b'
+              }
+            },
+          }
+        }
+      }
+    </script>
+
+    <!-- Tailwind inner css sheet -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+
+            /* font imported  DM san */
+            @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+            .hoverContent{
+              @apply hover:shadow-2xl transition ease-in duration-300
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container w-full md:w-[1000px] bg-gray-100 
+      p-11 font-['DM Sans'] mx-auto my-4 " >
+        <!-- parent container -->
+
+        <div class="grid grid-flow-dense grid-cols-1  md:grid-cols-4 grid-row-3 gap-6  " ><!-- grid container -->
+            
+            <!-- grid items item-1 -->
+            <div class=" hoverContent col-span-2 md:col-span-1  bg-bentoColorYellow-100 px-2 py-16 
+              rounded-md  flex flex-col justify-center items-center gap-y-1
+              " >
+              <!-- col 1 -->
+              <h3 class="text-black text-2xl font-semibold leading-5 w-[140px]" >
+                  Create and schedule content 
+                  <span class="text-bentoColorPurple-500 italic font-semibold ">
+                    quicker.
+                  </span>
+              </h3>
+
+              <button class="-ml-12 bg-bentoColorYellow-500 
+              ransition ease-in duration-150    py-2 px-4  rounded rounded-full text-sm mt-4 font-semibold
+                  text-bentoColorPurple-500 cursor-pointer hover:bg-yellow-500
+                  transform hover:scale-[1.02] active:translate-y-[4px]
+                  t
+              " >
+                Create Post
+                <i class="fa-solid fa-star"></i>
+              </button>
+            </div>
+
+            <!-- item-2  -->
+            <div class="hoverContent flex flex-col justify-center items-center rounded-md 
+              col-span-2 row-start-1 md:col-start-2 p-6 md:px-2 md:py-4 md:h-[230px] bg-bentoColorPurple-500 text-white
+            " >
+                <h2 class="text-5xl font-medium text-center ">
+                  Social Media <span class="text-bentoColorYellow-500">10x</span> 
+                  <span class="italic font-normal ">Faster</span> with AI
+                </h2>
+
+                <div class="flex flex-col justify-center items-center mt-6">
+                    <span>
+                      <!-- stars -->
+                      <i class="fa-solid fa-star text-bentoColorYellow-500"></i>
+                      <i class="fa-solid fa-star text-bentoColorYellow-500"></i>
+                      <i class="fa-solid fa-star text-bentoColorYellow-500"></i>
+                      <i class="fa-solid fa-star text-bentoColorYellow-500"></i>
+                      <i class="fa-solid fa-star text-bentoColorYellow-500"></i>
+                    </span>
+
+                    <span class="text-sm">
+                        over 4,000 5-star review
+                    </span>
+                </div>
+            </div>
+
+            <!-- item-3 -->
+            <div class="hoverContent col-span-2 md:col-span-1 md:row-span-2 bg-bentoColorPurple-100 rounded-md 
+              py-8 pl-8 border-box flex flex-col items-left gap-y-4
+            " >
+                  <h3 class=" font-semibold text-2xl leading-5 w-36">
+                    Schedule to social media.
+                  </h3>
+                  <img src="assets/images/illustration-schedule-posts.webp" alt="illustration-schedule-posts"
+                    class=" w-[300px] h-[222px] "
+                  >
+                  <p class=" text-sm font-semibold ">
+                      Optimize post timings 
+                      to publish content at 
+                      the perfect time for 
+                      your audience.
+                  </p>
+            </div>
+
+            <!-- items-4 -->
+            <div class="hoverContent col-span-2 md:col-span-1 md:row-span-2 bg-bentoColorYellow-500 rounded-md 
+              flex flex-col justify-center items-center p-4 gap-6
+            " >
+                <h3 class=" self-start w-32 text-2xl leading-5 font-semibold ">
+                  Write your content using AI.
+                </h3>
+
+                <img src="assets/images/illustration-ai-content.webp" alt="illustration-ai-content"
+                  class=" w-[215px]  md:w-[180px] h-[182px] "
+                >
+            </div>
+
+            <!-- item-5 -->
+            <div class="hoverContent col-span-2 md:col-span-1 pb-4 flex flex-col justify-center 
+            bg-white rounded-md " >
+                <img src="assets/images/illustration-multiple-platforms.webp" alt="illustration-multiple-platforms" 
+                class=" w-full md:w-[200px] "
+                >
+
+                <h4 class="text-lg font-semibold w-[130px] leading-6 mx-auto ">
+                    Manage 
+                    multiple
+                    account and 
+                    platform
+                </h4>
+
+            </div>
+
+            <!-- item-6 -->
+            <div class="hoverContent col-span-2 md:col-span-1 bg-bentoColorYellow-500 rounded-md overflow-hidden
+              flex flex-col justify-center md:justify-bottom items-center pt-4  md:h-[150px]
+            " >
+                <h4 class=" text-xl md:text-lg font-semibold w-[200px] md:w-[150px] md:leading-5 mx-auto md:mt-8 ">
+                  Maintain a
+                  consistent
+                  posting
+                  schedule. 
+                </h4>
+
+                <img src="assets/images/illustration-consistent-schedule.webp" alt="illustration-consistent-schedule"
+                class=" w-[200px]  md:w-32 mt-6 md:mt-4"
+                >
+
+            </div>
+
+            <!-- items-7 -->
+            <div class="hoverContent col-span-2 md:col-span-1 bg-white rounded-md py-6 md:py-2 px-4 
+              flex flex-col justify-center items-center gap-4
+            " >
+
+              <h3 class="text-4xl font-semibold">>56%</h3>
+
+              <p class="text-sm" >faster audience growth</p>
+
+              <img src="assets/images/illustration-audience-growth.webp" alt="illustration-audience-growth"
+              class=" ">
+
+            </div>
+
+            <!-- item-8 -->
+            <div class="hoverContent col-span-2 bg-bentoColorPurple-500 rounded-md p-4 
+              flex justify-center items-center
+            " >
+                <img src="assets/images/illustration-grow-followers.webp" alt="illustration-grow-followers" 
+                class=" w-[200px] h-[170] md:h-[182px]">
+
+                <h3 class="text-white text-lg md:text-2xl ">
+                    Grow followers
+                    with non-stop
+                    content.
+                </h3>
+            </div>
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
